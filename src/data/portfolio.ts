@@ -20,6 +20,13 @@ export const portfolioData = {
             institution: "Addis Ababa Science and Technology University",
             period: "Sep 2022 – Aug 2027",
             coursework: "Relevant coursework includes Internet Programming, Database Systems, Object-Oriented Programming (Java), Operating Systems, and Computer Architecture."
+        },
+        {
+            id: 2,
+            degree: "Competitive Programming & Coding Academy",
+            institution: "Africa to Silicon Valley, Addis Ababa, Ethiopia",
+            period: "03/2024 – Present",
+            coursework: "Coursework: Advanced Data Structures and Algorithms (Graph/Tree Algorithms, Dynamic Programming, Advanced String Algorithms)"
         }
     ],
     skills: {

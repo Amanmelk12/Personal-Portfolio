@@ -28,11 +28,22 @@ export function Navbar() {
 
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault();
-        setIsMobileMenuOpen(false);
-        const element = document.querySelector(href);
-        if (element) {
-            const top = element.getBoundingClientRect().top + window.scrollY - 80; // adjusted for navbar height
-            window.scrollTo({ top, behavior: "smooth" });
+        if (isMobileMenuOpen) {
+            // Close menu first, then scroll after the closing animation completes
+            setIsMobileMenuOpen(false);
+            setTimeout(() => {
+                const element = document.querySelector(href);
+                if (element) {
+                    const top = element.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top, behavior: "smooth" });
+                }
+            }, 350); // Wait for the exit animation (~300ms) to finish
+        } else {
+            const element = document.querySelector(href);
+            if (element) {
+                const top = element.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top, behavior: "smooth" });
+            }
         }
     };
 
