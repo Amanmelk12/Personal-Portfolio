@@ -32,7 +32,7 @@ export const portfolioData = {
     skills: {
         languages: ["JavaScript", "TypeScript", "Python", "Dart", "Go", "SQL", "C++", "Java", "PHP", "HTML", "CSS"],
         frameworks: ["Next.js", "React", "Node.js", "Flutter", "Tailwind CSS", "FastAPI", "Django"],
-        tools: ["Docker", "Git & GitHub", "Postman", "VS Code", "IntelliJ", "Firebase", "PostgreSQL"]
+        tools: ["Docker", "Git & GitHub", "Postman", "VS Code", "IntelliJ", "Firebase", "PostgreSQL", "Figma"]
     },
     projects: [
         {
