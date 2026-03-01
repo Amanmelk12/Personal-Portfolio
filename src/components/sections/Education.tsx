@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "../SectionHeading";
 import { portfolioData } from "@/data/portfolio";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, Code } from "lucide-react";
 
 export function Education() {
     return (
@@ -14,7 +14,7 @@ export function Education() {
                     subtitle="My academic background and qualifications."
                 />
 
-                <div className="max-w-3xl mx-auto mt-12">
+                <div className="max-w-3xl mx-auto mt-12 space-y-6">
                     {portfolioData.education.map((edu, index) => (
                         <motion.div
                             key={edu.id}
@@ -26,7 +26,11 @@ export function Education() {
                         >
                             <div className="hidden sm:flex items-start justify-center pt-2 shrink-0">
                                 <div className="p-3 md:p-4 bg-primary/10 rounded-full text-primary">
-                                    <GraduationCap size={28} className="md:w-8 md:h-8" />
+                                    {edu.id === 2 ? (
+                                        <Code size={28} className="md:w-8 md:h-8" />
+                                    ) : (
+                                        <GraduationCap size={28} className="md:w-8 md:h-8" />
+                                    )}
                                 </div>
                             </div>
 
